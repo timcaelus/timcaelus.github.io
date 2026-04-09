@@ -1,7 +1,7 @@
 :root {
-    --text: #6b6375;
-    --text-header: #2F283E;
-    --text-header-highlight: #9B90B6;
+    --text: #8577A6;
+    --text-faint: #2F283E;
+    --text-highlight: #9B90B6;
     --bg: #1C1825;
     --bg-header: #121019;
     --border: #e5e4e7;
@@ -86,8 +86,20 @@ h2 {
     font-size: 20px;
   }
 }
+
+h3 {
+    color: var(--text-highlight);
+    font: bold;
+    margin-bottom: 0px;
+}
+
 p {
-  margin: 0;
+    margin: 0;
+}
+
+p.faint {
+    color: var(--text-faint);
+    font-weight: 700;
 }
 
 main {
@@ -112,17 +124,49 @@ main {
     padding: 0 1rem 0 1rem;
     text-decoration: none;
     font-weight: 700;
-    color: var(--text-header);
+    color: var(--text-faint);
     font-size: 1.5rem;
 }
 
 .nav-link:hover {
-    color: var(--text-header-highlight);
+    color: var(--text-highlight);
 }
-
 
 #home-link {
     font-weight: bolder;
     font-size: 2rem;
+}
+
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.project-card {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    width: 25rem;
+    background: var(--bg-header);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    /* Stole these box shadow values from https://www.w3schools.com/css/css3_shadows_box.asp */
+}
+
+hr.rounded {
+    width: 60%;
+    border: 0px;
+    border-top: 5px solid var(--text-faint);
+    border-radius: 5px;
+}
+
+.project-card img {
+    border-radius: 30px;
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 
